@@ -1,0 +1,32 @@
+[project]
+name = "email-mcp"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = [
+    "fastmcp~=2.10.6",
+    "httpx~=0.28.1",
+]
+
+[project.optional-dependencies]
+dev = [
+    "httpx~=0.28.1",
+    "pre-commit~=4.2.0",
+    "pytest~=8.4.1",
+    "pytest-asyncio~=1.1.0",
+    "ruff~=0.12.4",
+    "pre-commit",
+]
+init = [
+    "alembic~=1.16.4",
+]
+
+
+[tool.ruff]
+line-length = 88
+target-version = "py311"
+
+[tool.ruff.lint]
+select = ["E", "F", "W", "I"]
+ignore = []
